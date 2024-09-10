@@ -1,0 +1,52 @@
+[NEAT]
+fitness_criterion     = max
+fitness_threshold     = 100
+pop_size              = 50
+reset_on_extinction   = False
+
+[DefaultGenome]
+num_inputs = 7   # Example: You might have different inputs based on your game's design
+num_outputs = 3  # Example: Typically the number of controls/actions your snake can take
+num_hidden = 0   # This can be adjusted based on the complexity you want in your network
+
+# node activation options
+activation_default      = sigmoid
+activation_mutate_rate  = 0.0
+activation_options      = sigmoid
+
+# node aggregation options
+aggregation_default     = sum
+aggregation_mutate_rate = 0.0
+aggregation_options     = sum
+
+# node bias options
+bias_init_mean          = 0.0
+bias_init_stdev         = 1.0
+bias_max_value          = 30.0
+bias_min_value          = -30.0
+bias_mutate_power       = 0.5
+bias_mutate_rate        = 0.7
+bias_replace_rate       = 0.1
+
+# genome connection options
+conn_add_prob           = 0.5
+conn_delete_prob        = 0.5
+conn_enable_rate        = 0.01
+conn_disable_rate       = 0.01
+conn_mutate_rate        = 0.8
+initial_connection      = full_direct
+
+# node mutation options
+node_add_prob           = 0.2
+node_delete_prob        = 0.2
+
+[DefaultSpeciesSet]
+compatibility_threshold = 3.0
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation       = 20
+
+[DefaultReproduction]
+elitism            = 2
+survival_threshold = 0.2
