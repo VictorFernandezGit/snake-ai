@@ -26,6 +26,7 @@ def show_game_over(surface):
                 pygame.quit()
                 sys.exit()
 
+
 def adjust_speed(score):
     if score < 10:
         return 10

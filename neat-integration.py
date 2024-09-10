@@ -1,5 +1,4 @@
 import os
-
 import neat
 import pygame
 from neat import genome
@@ -9,7 +8,9 @@ from snake import Snake
 from utilities import adjust_speed, draw_score
 from collission import check_collision
 
-
+"""
+NEAT config currently needs to be implemented
+"""
 def eval_genomes(genomes, config):
     for genome_id, genome in genomes:
         net = neat.nn.FeedForwardNetwork.create(genome, config)
@@ -24,11 +25,12 @@ def game_loop(net):
     food = Food()
 
     while True:
-        inputs = check_collision(snake, food)  # This needs to be implemented
+        inputs = check_collision(snake, food)
         output = net.activate(inputs)
 
         # Example assuming output is [turn_left, go_straight, turn_right]
         decision = output.index(max(output))
+        # need to set control inputs
         if decision == 0:
             snake.turn_left()
         elif decision == 1:

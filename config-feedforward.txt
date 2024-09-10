@@ -5,10 +5,10 @@ pop_size              = 50
 reset_on_extinction   = False
 
 [DefaultGenome]
-## needs work
-num_inputs = 7   # Example: You might have different inputs based on your game's design
-num_outputs = 3  # Example: Typically the number of controls/actions your snake can take
-num_hidden = 0   # This can be adjusted based on the complexity you want in your network
+## needs work ##
+num_inputs = 7
+num_outputs = 3
+num_hidden = 0
 
 # node activation options
 activation_default      = sigmoid

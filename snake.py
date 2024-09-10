@@ -20,7 +20,7 @@ class Snake:
         self.length = 1
         self.positions = [(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)]  # Start from center
         self.direction = DOWN  # Default direction
-        self.color = (17, 24, 47)
+        self.color = (0, 255, 0)
         self.score = 0
 
     def get_head_position(self):
@@ -69,7 +69,7 @@ class Snake:
                     self.turn(RIGHT)
 
 
-# If needed to test the Snake class independently
+# test the Snake class independently
 # if __name__ == "__main__":
 #     pygame.init()
 #     window = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))

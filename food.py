@@ -5,7 +5,7 @@ from settings import SCREEN_WIDTH, SCREEN_HEIGHT, GRID_SIZE
 
 class Food:
     def __init__(self):
-        self.color = (223, 163, 49)  # Define color only once, as it does not change
+        self.color = (223, 163, 49)  # Color of the food pixel
         self.randomize_position()  # Directly set the initial position with the method
 
     def randomize_position(self):

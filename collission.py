@@ -1,6 +1,4 @@
-from food import Food
-
-
+# Checks collision of the snake and food
 def check_collision(snake, food):
     if snake.positions[0] == food.position:
         snake.length += 1

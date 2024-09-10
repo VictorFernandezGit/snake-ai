@@ -38,9 +38,8 @@ def main():
         clock.tick(adjust_speed(snake.score))
         snake.handle_keys()
 
-        #check collission
+        # Check collision
         check_collision(snake, food)
-
 
 
 if __name__ == '__main__':
