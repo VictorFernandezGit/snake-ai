@@ -1,5 +1,6 @@
 import os
 import neat
+import neat.genome
 import pygame
 from settings import SCREEN_WIDTH, SCREEN_HEIGHT, GRID_SIZE
 from food import Food
@@ -110,9 +111,12 @@ def run_neat():
     config_path = os.path.join(local_dir, 'config-feedforward.txt')
     # Load NEAT configuration
     try:
+
         config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                              neat.DefaultSpeciesSet, neat.DefaultStagnation,
                              config_path)
+        config.genome_config.compatibility_disjoint_coefficient = 1.0
+
     except Exception as e:
         print(f"Error loading NEAT config: {e}")
         return
